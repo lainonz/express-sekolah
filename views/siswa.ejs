@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ExpressJS Database</title>
+  </head>
+  <body>
+    <a href="/insert">Tambah Data</a>
+    <table border="1">
+      <thead>
+        <th>Nis</th>
+        <th>Nama</th>
+        <th>Kelas</th>
+        <th>Aksi</th>
+      </thead>
+      <tbody>
+        <% data.forEach(siswa => { %>
+        <tr>
+          <td><%= siswa.nis %></td>
+          <td><%= siswa.nama %></td>
+          <td><%= siswa.kelas %></td>
+          <td>
+            <a href="edit/<%= siswa.nis %>">edit</a>
+            <form action="delete/<%= siswa.nis %>" method="POST">
+              <button type="submit">delete</button>
+            </form>
+          </td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </body>
+</html>

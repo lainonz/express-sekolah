@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="<%= form %>" method="POST">
+      <div>
+        <fieldset>
+          <legend>Tambah siswa</legend>
+          <table>
+            <tr>
+              <td>Nis</td>
+              <td><input type="text" name="nis" value="<%= nis %>" /></td>
+            </tr>
+            <tr>
+              <td>Nama</td>
+              <td><input type="text" name="nama" value="<%= nama %>" /></td>
+            </tr>
+            <tr>
+              <td>Kelas</td>
+              <td><input type="text" name="kelas" value="<%= kelas %>" /></td>
+            </tr>
+          </table>
+          <button type="submit">simpan</button>
+        </fieldset>
+      </div>
+    </form>
+  </body>
+</html>
